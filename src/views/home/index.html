@@ -1,56 +1,136 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт телефонов</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEAL - Ремонт телефонов</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <h1>Ремонт телефонов</h1>
-            <nav>
-                <ul>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
+      <nav class="container">
+        <div class="logo">HEAL</div>
+        <div class="nav-links">
+          <a href="#services">Услуги</a>
+          <a href="#about">О нас</a>
+          <a href="#contact">Контакты</a>
         </div>
+      </nav>
     </header>
 
     <section id="hero">
-        <div class="container">
-            <h2>Профессиональный ремонт телефонов</h2>
-            <p>Быстро, качественно, с гарантией!</p>
-            <a href="#contact" class="btn">Заказать ремонт</a>
+      <div class="container">
+        <h1>Профессиональный ремонт гаджетов</h1>
+        <p>Быстрое восстановление с гарантией до 1 года</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>10 000+</h3>
+            <p>Успешных ремонтов</p>
+          </div>
+          <div class="stat-card">
+            <h3>98%</h3>
+            <p>Довольных клиентов</p>
+          </div>
+          <div class="stat-card">
+            <h3>15 мин</h3>
+            <p>Среднее время ремонта</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="services">
-        <div class="container">
-            <h2>Наши услуги</h2>
-            <div class="service-item">
-                <h3>Замена экрана</h3>
-                <p>Замена разбитого экрана на оригинальный или аналог.</p>
-            </div>
-            <div class="service-item">
-                <h3>Замена батареи</h3>
-                <p>Замена старой батареи на новую с восстановлением емкости.</p>
-            </div>
-            <div class="service-item">
-                <h3>Ремонт после воды</h3>
-                <p>Чистка и восстановление телефона после попадания жидкости.</p>
-            </div>
+    <section id="services" class="container">
+      <h2>Наши услуги</h2>
+      <div class="service-grid">
+        <div class="service-card" onclick="showPrice('screen')">
+          <i class="fas fa-mobile-screen"></i>
+          <h3>Замена экрана</h3>
+          <p>От 1990 ₽</p>
         </div>
+
+        <div class="service-card" onclick="showPrice('battery')">
+          <i class="fas fa-battery-three-quarters"></i>
+          <h3>Замена батареи</h3>
+          <p>От 1490 ₽</p>
+        </div>
+
+        <div class="service-card" onclick="showPrice('water')">
+          <i class="fas fa-tint"></i>
+          <h3>Ремонт после воды</h3>
+          <p>От 2490 ₽</p>
+        </div>
+      </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>О нас</h2>
-            <p>Мы — команда профессионалов, занимающихся ремонтом телефонов уже более 5 лет. Наши специалисты имеют большой опыт работы с различными моделями телефонов и используют только качественные запчасти.</p>
+    <div id="screenPrice" class="price-modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="hidePrice()">&times;</span>
+        <h3>Замена экрана</h3>
+        <ul class="price-list">
+          <li><span>iPhone X</span><span>4990 ₽</span></li>
+          <li><span>Samsung S20</span><span>5990 ₽</span></li>
+          <li><span>Xiaomi Redmi 9</span><span>2990 ₽</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="batteryPrice" class="price-modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="hidePrice()">&times;</span>
+        <h3>Замена аккумулятора</h3>
+        <ul class="price-list">
+          <li><span>iPhone 11</span><span>3490 ₽</span></li>
+          <li><span>Samsung A50</span><span>2490 ₽</span></li>
+          <li><span>Huawei P30</span><span>2990 ₽</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="waterPrice" class="price-modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="hidePrice()">&times;</span>
+        <h3>Ремонт после воды</h3>
+        <ul class="price-list">
+          <li><span>Диагностика</span><span>Бесплатно</span></li>
+          <li><span>Чистка</span><span>от 1990 ₽</span></li>
+          <li><span>Полное восстановление</span><span>от 4990 ₽</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="brands-carousel">
+      <span
+        >📱 iPhone • Samsung • Xiaomi • Huawei • Honor • Google • OnePlus •
+        Realme • Nokia</span
+      >
+    </div>
+
+    <section id="reviews" class="container">
+      <h2>Отзывы клиентов</h2>
+      <div class="review-slider">
+        <div class="review-card">
+          <h4>Алексей Петров</h4>
+          <p>
+            Самый быстрый ремонт из всех, что я видел. Сделали за 20 минут, как
+            новенький!
+          </p>
         </div>
+        <div class="review-card">
+          <h4>Мария Иванова</h4>
+          <p>Отличный сервис, профессиональный подход. Теперь только сюда!</p>
+        </div>
+        <div class="review-card">
+          <h4>Дмитрий Смирнов</h4>
+          <p>
+            Починили телефон после воды, спасли все данные. Огромное спасибо!
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
@@ -61,5 +141,52 @@
             <p>Email: info@remont-telefonov.ru</p>
         </div>
     </section>
-</body>
+
+    <script>
+      const cards = document.querySelectorAll(".service-card");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      cards.forEach((card) => observer.observe(card));
+
+      function showPrice(service) {
+        document.getElementById(service + "Price").style.display = "flex";
+      }
+
+      function hidePrice() {
+        document.querySelectorAll(".price-modal").forEach((modal) => {
+          modal.style.display = "none";
+        });
+      }
+
+      window.onclick = function (event) {
+        if (event.target.className === "price-modal") {
+          hidePrice();
+        }
+      };
+
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        document.querySelector("#hero").style.backgroundPositionY =
+          scrolled * 0.5 + "px";
+      });
+
+      const button = document.querySelector(".animated-button");
+      button.addEventListener("mouseover", () => {
+        button.style.transform = "scale(1.05)";
+      });
+      button.addEventListener("mouseout", () => {
+        button.style.transform = "scale(1)";
+      });
+      
+    </script>
+  </body>
 </html>
