@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 app.use("", express.static(__dirname + "/src/views/home"));
 app.get("", (req, res) => {
-    res.sendFile(__dirname + "/src/views/home/index.html");
+    res.sendFile(__dirname + "/src/views/home/indexTest.html");
 });
 
 // ПОРТ ПРИЛОЖЕНИЯ
