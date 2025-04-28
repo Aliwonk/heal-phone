@@ -6,17 +6,8 @@ btnsCategory.forEach(element => {
         const list = document.getElementById(`${element.id}-list`);
         list.classList.add("list-show");
 
-        list.addEventListener("mouseleave", (event) => {
+        list.addEventListener("mouseout", () => {
             list.classList.remove("list-show");
-        })
-    });
-
-    element.addEventListener("mouseleave", (event) => {
-        const list = document.getElementById(`${element.id}-list`);
-        
-        console.log(list);
-        if(!list) {
-            list.classList.remove("list-show");
-        }
+        });
     });
 });

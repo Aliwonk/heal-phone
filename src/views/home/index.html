@@ -1,192 +1,235 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HEAL - Ремонт телефонов</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <title>Ремонт электроники</title>
+    <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
     <header>
-      <nav class="container">
-        <div class="logo">HEAL</div>
-        <div class="nav-links">
-          <a href="#services">Услуги</a>
-          <a href="#about">О нас</a>
-          <a href="#contact">Контакты</a>
+      <div class="header-top">
+        <div class="menu">
+          <div class="item-menu">Услуги</div>
+          <div class="item-menu">О нас</div>
+          <div class="item-menu">Контакты</div>
         </div>
-      </nav>
+        <div class="header-contact">
+          <p>Республика Тыва г. Кызыл ул Интернациональная 105</p>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="logo">DoctorMob</div>
+        <div class="category">
+          <div id="phone" class="item-category">
+            <p>Телефоны</p>
+            <div id="phone-list" class="list-hide">
+              <div class="name">Samsung</div>
+              <div class="name">Iphone</div>
+              <div class="name">Xiaomi</div>
+              <div class="name">Honor</div>
+              <div class="name">Poco</div>
+            </div>
+          </div>
+          <div id="tablet" class="item-category">
+            <p>Планшеты</p>
+            <div id="tablet-list" class="list-hide">
+              <div class="name">Ipad</div>
+              <div class="name">Asus</div>
+              <div class="name">Lenovo</div>
+              <div class="name">Samsung</div>
+            </div>
+          </div>
+          <div id="notebook" class="item-category">
+            <p>Ноутбуки</p>
+            <div id="notebook-list" class="list-hide">
+              <div class="name">Asus</div>
+              <div class="name">Lenovo</div>
+              <div class="name">Ardor</div>
+              <div class="name">MSI</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-
-    <section id="hero">
-      <div class="container">
-        <h1>Профессиональный ремонт гаджетов</h1>
-        <p>Быстрое восстановление с гарантией до 1 года</p>
-
-        <div class="stats-grid">
-          <div class="stat-card">
-            <h3>10 000+</h3>
-            <p>Успешных ремонтов</p>
-          </div>
-          <div class="stat-card">
-            <h3>98%</h3>
-            <p>Довольных клиентов</p>
-          </div>
-          <div class="stat-card">
-            <h3>15 мин</h3>
-            <p>Среднее время ремонта</p>
-          </div>
+    <main>
+      <div class="promo">
+        <div class="image">
+          <img src="static/img/iphone5.png" alt="рисунок" />
         </div>
-      </div>
-    </section>
-
-    <section id="services" class="container">
-      <h2>Наши услуги</h2>
-      <div class="service-grid">
-        <div class="service-card" onclick="showPrice('screen')">
-          <i class="fas fa-mobile-screen"></i>
-          <h3>Замена экрана</h3>
-          <p>От 1990 ₽</p>
-        </div>
-
-        <div class="service-card" onclick="showPrice('battery')">
-          <i class="fas fa-battery-three-quarters"></i>
-          <h3>Замена батареи</h3>
-          <p>От 1490 ₽</p>
-        </div>
-
-        <div class="service-card" onclick="showPrice('water')">
-          <i class="fas fa-tint"></i>
-          <h3>Ремонт после воды</h3>
-          <p>От 2490 ₽</p>
-        </div>
-      </div>
-    </section>
-
-    <div id="screenPrice" class="price-modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="hidePrice()">&times;</span>
-        <h3>Замена экрана</h3>
-        <ul class="price-list">
-          <li><span>iPhone X</span><span>4990 ₽</span></li>
-          <li><span>Samsung S20</span><span>5990 ₽</span></li>
-          <li><span>Xiaomi Redmi 9</span><span>2990 ₽</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="batteryPrice" class="price-modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="hidePrice()">&times;</span>
-        <h3>Замена аккумулятора</h3>
-        <ul class="price-list">
-          <li><span>iPhone 11</span><span>3490 ₽</span></li>
-          <li><span>Samsung A50</span><span>2490 ₽</span></li>
-          <li><span>Huawei P30</span><span>2990 ₽</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="waterPrice" class="price-modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="hidePrice()">&times;</span>
-        <h3>Ремонт после воды</h3>
-        <ul class="price-list">
-          <li><span>Диагностика</span><span>Бесплатно</span></li>
-          <li><span>Чистка</span><span>от 1990 ₽</span></li>
-          <li><span>Полное восстановление</span><span>от 4990 ₽</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="brands-carousel">
-      <span
-        >📱 iPhone • Samsung • Xiaomi • Huawei • Honor • Google • OnePlus •
-        Realme • Nokia</span
-      >
-    </div>
-
-    <section id="reviews" class="container">
-      <h2>Отзывы клиентов</h2>
-      <div class="review-slider">
-        <div class="review-card">
-          <h4>Алексей Петров</h4>
-          <p>
-            Самый быстрый ремонт из всех, что я видел. Сделали за 20 минут, как
-            новенький!
+        <div class="badge">
+          <p id="caption">
+            Профессиональный ремонт
+            <span class="flip-container">
+              <span class="flip-word">гаджетов</span>
+              <span class="flip-word">смартфонов</span>
+              <span class="flip-word">ноутбуков</span>
+              <span class="flip-word">планшетов</span>
+            </span>
           </p>
-        </div>
-        <div class="review-card">
-          <h4>Мария Иванова</h4>
-          <p>Отличный сервис, профессиональный подход. Теперь только сюда!</p>
-        </div>
-        <div class="review-card">
-          <h4>Дмитрий Смирнов</h4>
-          <p>
-            Починили телефон после воды, спасли все данные. Огромное спасибо!
+          <p id="description">
+            DoctorMob – профессиональный «Мобильный доктор» для ваших любимых
+            электронных гаджетов! Наш сервисный центр предлагает весь возможный
+            спектр услуг, касающийся ремонта электронной техники.
           </p>
+          <div class="list-benefits">
+            <div class="item-benefits">
+              <div class="benefits-icon">
+                <img src="static/img/icons/icon-1.png" alt="иконка" />
+              </div>
+              <div class="benefits-text">
+                <p>10 000+</p>
+                <p>Успешных ремонтов</p>
+              </div>
+            </div>
+            <div class="item-benefits">
+              <div class="benefits-icon">
+                <img src="static/img/icons/icon-smile.png" alt="иконка" />
+              </div>
+              <div class="benefits-text">
+                <p>95%</p>
+                <p>Довольных клиентов</p>
+              </div>
+            </div>
+            <div class="item-benefits">
+              <div class="benefits-icon">
+                <img src="static/img/icons/icon-time.png" alt="иконка" />
+              </div>
+              <div class="benefits-text">
+                <p>15 мин</p>
+                <p>Среднее время ремонта</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+      <div class="service">
+        <div class="service-image"></div>
+        <div class="service-text">
+          <p id="service-caption">Услуги</p>
+          <div class="list-service">
+            <div class="item-service">
+              <div class="item-service-header">
+                <div class="item-service-text">
+                  <img src="static/img/icons/icon-display.png" alt="" />
+                  <p>Замена экрана</p>
+                </div>
+                <button>Подробнее</button>
+              </div>
+              <div class="item-service-body">
+                <ul>
+                  <div>
+                    ✅ Используем оригинальные дисплеи или качественные аналоги.
+                  </div>
+                  <div>✅ Работаем 30–60 минут с гарантией до 6 месяцев.</div>
+                  <div>
+                    ✅ Восстанавливаем цветопередачу, сенсор и защиту от влаги.
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="item-service">
+              <div class="item-service-header">
+                <div class="item-service-text">
+                  <img src="static/img/icons/icon-battery.png" alt="" />
+                  <p>Замена батареи</p>
+                </div>
+                <button>Подробнее</button>
+              </div>
+              <div class="item-service-body">
+                <ul>
+                  <div>
+                    ✅ Ставим оригинальные аккумуляторы или надежные аналоги.
+                  </div>
+                  <div>✅ Замена за 30–60 минут с гарантией до 12 месяцев.</div>
+                  <div>
+                    ✅ Восстанавливаем емкость, время работы и безопасность
+                    устройства.
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="item-service">
+              <div class="item-service-header">
+                <div class="item-service-text">
+                  <img src="static/img/icons/icon-water.png" alt="" />
+                  <p>Ремонт поcле воды</p>
+                </div>
+                <button>Подробнее</button>
+              </div>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Контакты</h2>
-            <p>Адрес: республика Тыва г. Кызыл ул Интернациональная 105</p>
-            <p>Телефон: +7 (000) 111-22-33</p>
-            <p>Email: info@remont-telefonov.ru</p>
+              <div class="item-service-body">
+                <ul>
+                  <div>
+                    ✅ Проводим диагностику, сушку и чистку от коррозии.
+                  </div>
+                  <div>
+                    ✅ Меняем поврежденные компоненты (разъёмы, батарею, платы).
+                  </div>
+                  <div>
+                    ✅ Гарантируем восстановление с защитой от окисления на 3
+                    месяца.
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="contact">
+        <div class="contact-caption">
+          <h2>Отправьте заявку, чтобы получить скидку 5%</h2>
+        </div>
+        <form name="bid">
+          <div class="list-inputs">
+            <div class="item-input">
+              <label for="name">Имя</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Введите имя"
+              />
+            </div>
+            <div class="item-input">
+              <label for="phone-number">Номер телефона</label>
+              <input
+                type="text"
+                name="phone-number"
+                id="phone-number"
+                placeholder="+7 900 000 0000"
+              />
+            </div>
+          </div>
+          <button>Отправить</button>
+        </form>
+      </div>
+      <div class="feedback">
+        <div class="feedback-caption">
+          <h1>Отзывы клиентов</h1>
+        </div>
+        <div class="list-feedback">
+          <div class="item-feedback">
+            <p class="name-user">Машков Иван</p>
+            <p class="description-user">
+              Самый быстрый ремонт из всех, что я видел. Сделали за 20 минут,
+              как новенький!
+            </p>
+          </div>
 
-    <script>
-      const cards = document.querySelectorAll(".service-card");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+          <div class="item-feedback">
+            <p class="name-user">Мария Иванова</p>
+            <p class="description-user">Отличный сервис, профессиональный подход. Теперь только сюда!</p>
+          </div>
 
-      cards.forEach((card) => observer.observe(card));
-
-      function showPrice(service) {
-        document.getElementById(service + "Price").style.display = "flex";
-      }
-
-      function hidePrice() {
-        document.querySelectorAll(".price-modal").forEach((modal) => {
-          modal.style.display = "none";
-        });
-      }
-
-      window.onclick = function (event) {
-        if (event.target.className === "price-modal") {
-          hidePrice();
-        }
-      };
-
-      window.addEventListener("scroll", () => {
-        const scrolled = window.pageYOffset;
-        document.querySelector("#hero").style.backgroundPositionY =
-          scrolled * 0.5 + "px";
-      });
-
-      const button = document.querySelector(".animated-button");
-      button.addEventListener("mouseover", () => {
-        button.style.transform = "scale(1.05)";
-      });
-      button.addEventListener("mouseout", () => {
-        button.style.transform = "scale(1)";
-      });
-      
-    </script>
+          <div class="item-feedback">
+            <p class="name-user">Дмитрий Смирнов</p>
+            <p class="description-user">Починили телефон после воды, спасли все данные. Огромное спасибо!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="static/index.js"></script>
   </body>
 </html>
