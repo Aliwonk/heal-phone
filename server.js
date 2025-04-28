@@ -7,7 +7,7 @@ app.use(router);
 
 // ПОРТ ПРИЛОЖЕНИЯ
 
-app.listen(3001, () => {
-    console.log("СЕРВЕР РАБОТАЕТ НА ПОРТУ 3001");
-    console.log("http://localhost:3001");
+app.listen(3000, () => {
+    console.log("СЕРВЕР РАБОТАЕТ НА ПОРТУ 3000");
+    console.log("http://localhost:3000");
 });
