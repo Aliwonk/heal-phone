@@ -651,6 +651,7 @@ form>button:hover {
     .service-image {
         width: 100%;
         height: 300px;
+        display: none;
     }
 
     #service-caption {
@@ -733,6 +734,10 @@ form>button:hover {
         width: 92%;
     }
 
+    .promo .badge {
+        width: 90%;
+    }
+
     .header-main .category {
         flex-direction: column;
     }
@@ -751,6 +756,7 @@ form>button:hover {
     #description {
         font-size: 5vw;
         text-align: center;
+        padding-right: 0px;
     }
 
     .item-benefits {
@@ -783,6 +789,24 @@ form>button:hover {
 
     .item-service-body {
         font-size: 5vw;
+    }
+
+    .list-service {
+        align-items: center;
+    }
+
+    .flip-container {
+        width: 45%;
+    }
+    
+    .item-feedback {
+        padding: 15px;
+    }
+
+    .feedback-caption {
+        height: 15%;
+        font-size: 2.5vw;
+        text-align: center;
     }
 
     /* Уменьшаем отступы */
