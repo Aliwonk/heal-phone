@@ -729,6 +729,10 @@ form>button:hover {
 }
 
 @media (max-width: 480px) {
+
+    .menu {
+        display: none;
+    }
     .promo .image {
         padding: 0px;
         width: 92%;
@@ -800,7 +804,11 @@ form>button:hover {
     }
     
     .item-feedback {
-        padding: 15px;
+        padding: 8px;
+    }
+    
+    .contact-caption {
+        font-size: 4vw;
     }
 
     .feedback-caption {
