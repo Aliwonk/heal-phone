@@ -2,16 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Ремонт электроники</title>
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
     <header>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Оставить заявку на ремонт</h2>
+          <form id="modal-form">
+            <div class="item-input">
+              <label for="modal-name">Имя</label>
+              <input
+                type="text"
+                id="modal-name"
+                placeholder="Введите имя"
+                required
+              />
+            </div>
+            <div class="item-input">
+              <label for="modal-phone">Номер телефона</label>
+              <input
+                type="tel"
+                id="modal-phone"
+                placeholder="+7 900 000 0000"
+                required
+              />
+            </div>
+            <button type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
       <div class="header-top">
         <div class="menu">
-          <div class="item-menu">Услуги</div>
           <div class="item-menu">О нас</div>
+          <div class="item-menu">Услуги</div>
           <div class="item-menu">Контакты</div>
         </div>
         <div class="header-contact">
@@ -22,32 +52,13 @@
         <div class="logo">DoctorMob</div>
         <div class="category">
           <div id="phone" class="item-category">
-            <p>Телефоны</p>
-            <div id="phone-list" class="list-hide">
-              <div class="name">Samsung</div>
-              <div class="name">Iphone</div>
-              <div class="name">Xiaomi</div>
-              <div class="name">Honor</div>
-              <div class="name">Poco</div>
-            </div>
+            <p>Замена экрана</p>
           </div>
           <div id="tablet" class="item-category">
-            <p>Планшеты</p>
-            <div id="tablet-list" class="list-hide">
-              <div class="name">Ipad</div>
-              <div class="name">Asus</div>
-              <div class="name">Lenovo</div>
-              <div class="name">Samsung</div>
-            </div>
+            <p>Замена батареи</p>
           </div>
           <div id="notebook" class="item-category">
-            <p>Ноутбуки</p>
-            <div id="notebook-list" class="list-hide">
-              <div class="name">Asus</div>
-              <div class="name">Lenovo</div>
-              <div class="name">Ardor</div>
-              <div class="name">MSI</div>
-            </div>
+            <p>Ремонт после воды</p>
           </div>
         </div>
       </div>
@@ -201,7 +212,7 @@
               />
             </div>
           </div>
-          <button>Отправить</button>
+          <button id="btn-form">Отправить</button>
         </form>
       </div>
       <div class="feedback">
@@ -219,12 +230,16 @@
 
           <div class="item-feedback">
             <p class="name-user">Мария Иванова</p>
-            <p class="description-user">Отличный сервис, профессиональный подход. Теперь только сюда!</p>
+            <p class="description-user">
+              Отличный сервис, профессиональный подход. Теперь только сюда!
+            </p>
           </div>
 
           <div class="item-feedback">
             <p class="name-user">Дмитрий Смирнов</p>
-            <p class="description-user">Починили телефон после воды, спасли все данные. Огромное спасибо!</p>
+            <p class="description-user">
+              Починили телефон после воды, спасли все данные. Огромное спасибо!
+            </p>
           </div>
         </div>
       </div>
