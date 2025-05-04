@@ -17,7 +17,28 @@
           <h2>Оставить заявку на ремонт</h2>
           <form id="modal-form">
             <div class="item-input">
-              <label for="modal-name">Имя</label>
+              <label class="label-modal" for="brand">Бренд</label>
+              <select id="brand" name="brand" required>
+                <option disabled selected>Выберите бренд</option>
+                <option value="IPHONE">Iphone</option>
+                <option value="SAMSUNG">Samsung</option>
+                <option value="XIAOMI">Xiaomi</option>
+                <option value="HUAWEI">Huawei</option>
+              </select>
+            </div>
+
+            <div class="item-input">
+              <label class="label-modal" for="reason">Услуга</label>
+              <select id="reason" name="reason" required>
+                <option disabled selected>Выберите услугу</option>
+                <option value="DISPLAY">Замена экрана</option>
+                <option value="BATTARY">Замена батареи</option>
+                <option value="WATER">Ремонт после воды</option>
+              </select>
+            </div>
+
+            <div class="item-input">
+              <label class="label-modal" for="modal-name">Имя</label>
               <input
                 type="text"
                 id="modal-name"
@@ -26,7 +47,7 @@
               />
             </div>
             <div class="item-input">
-              <label for="modal-phone">Номер телефона</label>
+              <label class="label-modal" for="modal-phone">Номер телефона</label>
               <input
                 type="tel"
                 id="modal-phone"
@@ -34,7 +55,7 @@
                 required
               />
             </div>
-            <button type="submit">Отправить заявку</button>
+            <button id="btn-modal">Отправить заявку</button>
           </form>
         </div>
       </div>
@@ -48,6 +69,7 @@
           <p>Республика Тыва г. Кызыл ул Интернациональная 105</p>
         </div>
       </div>
+      
       <div class="header-main">
         <div class="logo">DoctorMob</div>
         <div class="category">
@@ -125,7 +147,7 @@
                   <img src="static/img/icons/icon-display.png" alt="" />
                   <p>Замена экрана</p>
                 </div>
-                <button>Подробнее</button>
+                <button>Оставить заявку</button>
               </div>
               <div class="item-service-body">
                 <ul>
@@ -145,7 +167,7 @@
                   <img src="static/img/icons/icon-battery.png" alt="" />
                   <p>Замена батареи</p>
                 </div>
-                <button>Подробнее</button>
+                <button>Оставить заявку</button>
               </div>
               <div class="item-service-body">
                 <ul>
@@ -166,7 +188,7 @@
                   <img src="static/img/icons/icon-water.png" alt="" />
                   <p>Ремонт поcле воды</p>
                 </div>
-                <button>Подробнее</button>
+                <button>Оставить заявку</button>
               </div>
 
               <div class="item-service-body">
@@ -244,7 +266,9 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <button id="btn-admin">Вход для администратора</button>
+    </footer>
     <script src="static/index.js"></script>
   </body>
 </html>

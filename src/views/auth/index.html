@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Авторизация</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="login" placeholder="Введите логин" />
+      <input type="password" id="password" placeholder="Введите пароль" />
+      <button id="btn-form">Войти</button>
+    </form>
+
+    <script>
+      const login = document.getElementById("login");
+      const password = document.getElementById("password");
+      const btn = document.getElementById("btn-form");
+
+      btn.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        document.cookie = `login=${login.value}; path=/admin`;
+        document.cookie = `password=${password.value}; path=/admin`;
+
+        document.location.href = "/admin";
+      });
+    </script>
+  </body>
+</html>
