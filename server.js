@@ -32,3 +32,6 @@ sequelizePSQL.sync({ alter: true }).then(() => {
         console.log("http://localhost:3000");
     });
 })
+.catch((err) => {
+    console.log(err);
+})
